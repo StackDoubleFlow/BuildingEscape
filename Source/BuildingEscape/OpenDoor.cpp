@@ -20,7 +20,8 @@ void UOpenDoor::BeginPlay()
 	Super::BeginPlay();
 
 	// ...
-	GetOwner()->SetActorRotation(*(new FRotator(0, 60.0f, 0)), ETeleportType::None);
+	AActor* Owner = GetOwner();
+	Owner->SetActorRotation(*(new FRotator(0, OpenAngle, 0)), ETeleportType::None);
 }
 
 
